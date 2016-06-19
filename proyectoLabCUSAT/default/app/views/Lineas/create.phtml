@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @author MCR
+ * @copyright 2016
+ */
+?>
+<div class="content">
+    <?php View::content(); ?>
+    <h3>Crear Linea</h3>
+    <?php echo Form::open(); ?>
+    
+    <label>Serie
+    <?php echo Form::text('lineas.serie') ?></label>
+    <label>Telefono
+    <?php echo Form::text('lineas.tel') ?></label>
+    <label>Empresa
+    <?php echo Form::text('lineas.empresa') ?></label>
+    
+    <?php echo Form::submit('Agregar') ?>
+<?php echo Form::close(); ?>
+</div>

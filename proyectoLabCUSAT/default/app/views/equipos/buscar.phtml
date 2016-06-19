@@ -1,0 +1,28 @@
+<?php //View::content()?>
+<br><br>
+<div align="center">
+<h5>Lista de Equipos</h5><br>
+<table border="1">
+<tr style="background-color: #c0c0c0;">
+    <td>Modificar</td>
+    <td>Borrar</td>
+    <td>Equipo</td>
+    <td>Tipo</td>
+    <td>Imei</td>
+    <td>Linea</td>
+   
+</tr>
+<?php foreach ($equipos as $equipo) :?>
+<tr>
+    <td><?php echo html::linkAction("edit/$equipo->id/",'Modificar') ?></td>
+    <td><?php echo html::linkAction("del/$equipo->id/",'Borrar') ?></td>
+    <td><?php echo $equipo->serie ?></td>
+    <td><?php echo $equipo->tipo ?></td>
+    <td><?php echo $equipo->imei ?></td>
+    <td><?php echo $equipo->getLineas()->tel ?></td>
+	
+</tr>  
+<?php endforeach;?>
+</table>
+
+</div><br><br>

@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @author MCR
+ * @copyright 2016
+ */
+ 
+ 
+ 
+ 
+?>
+<div class="content">
+    <?php echo View::content(); ?>
+    <h3>Lineas</h3><?PHP echo html::linkAction("create/",'Crear') ?>
+    <ul>
+        <?php foreach($listLineas->items as $item) : ?>
+        <li>
+        <?php echo html::linkAction("edit/$item->id/",'Editar') ?>
+        <?php echo html::linkAction("del/$item->id/",'Borrar') ?>
+        <strong><?php echo $item->serie?> - <?php echo $item->tel ?> - <?php echo $item->empresa ?></strong>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+    <?php if($listLineas->prev) echo html::linkAction("index/$listLineas->prev/",'<< Anterior |'); ?>
+    <?php if($listLineas->next) echo html::linkAction("index/$listLineas->next/",'Proximo >>'); ?>
+</div>

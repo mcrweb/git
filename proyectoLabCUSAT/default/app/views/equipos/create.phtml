@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @author MCR
+ * @copyright 2016
+ */
+?>
+<?php Tag::js('jquery/jquery.min'); ?>
+<?php Tag::js('jquery/jquery.kumbia'); ?>
+<div class="content">
+    <?php View::content(); ?>
+    <h3>Agregar Equipo</h3>
+    <?php echo Ajax::form('contAjax') ?>
+    <label>Serie
+    <?php echo Form::text('equipos.serie') ?></label>
+	<label>Tipo
+	<?php echo Form::text('equipos.tipo') ?></label>
+    <label>Telefono
+    <?php echo Form::dbSelect('equipos.lineas_id') ?></label>
+    <label>Imei
+    <?php echo Form::text('equipos.imei') ?></label>
+	<?php echo Form::submit('Agregar') ?></label>
+	<?php echo Form::close();?>
+</div>
+<div id="contAjax"></div>

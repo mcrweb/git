@@ -1,0 +1,6 @@
+<div class="navbar-search">
+    <?php echo Form::open('/buscar/', 'post', array('equipos' => 'form-search')) ?>
+    <?php echo Form::text('buscar', 'required="required" placeholder="¿Que Buscaba?" class="input-xlarge search-query" maxlength="80" ') ?>
+    <?php echo Form::submit('BUSCAR'); ?>
+    <?php echo Form::close(); ?>
+</div>
